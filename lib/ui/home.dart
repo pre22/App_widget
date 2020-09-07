@@ -6,15 +6,40 @@ class Home extends StatelessWidget {
     return Container(
         alignment: Alignment.center,
         color: Colors.deepOrangeAccent,
-        child: Text(
-          "Pizza",
-          textDirection: TextDirection.ltr,
-          style: TextStyle(
-            fontFamily: 'Oxygen',
-            fontWeight: FontWeight.w300,
-            fontSize: 80.0,
-            decoration: TextDecoration.none,
+        // Rows and column
+        child: Column(children: <Widget>[
+          Row(
+            children: <Widget>[
+              Expanded(
+                child: Text(
+                  "Margherita, Marinara",
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(
+                    fontFamily: 'Oxygen',
+                    fontWeight: FontWeight.normal,
+                    fontSize: 30.0,
+                    decoration: TextDecoration.none,
+                  ),
+                ),
+              )
+            ],
           ),
-        ));
+
+          // row two
+          Row(children: <Widget>[
+            Expanded(
+              child: Text(
+                "Tomato Basil Mozzarella",
+                textDirection: TextDirection.ltr,
+                style: TextStyle(
+                  fontFamily: 'Oxygen',
+                  fontWeight: FontWeight.normal,
+                  fontSize: 30.0,
+                  decoration: TextDecoration.none,
+                ),
+              ),
+            )
+          ]),
+        ]));
   }
 }
